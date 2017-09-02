@@ -1,0 +1,79 @@
+Name: Liu Bei
+Student Id: 5307020714
+EE 450 Socket Programming Project 
+Spring 2017
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+
+violate USC's student conduct code.  In particular, the work is my
+
+own, not a collaboration, and does not involve code created by other
+
+people And I did not share my solution or parts of it with
+
+other students in the project.”
+
+
+Initial below to "sign" the above statement:
+
+LIU BEI
+----------------------------------------------
+WHAT I HAVE DONE IN THE ASSIGNMENT
+
+This is a socket programming project. Because I have not touched on socket programming at all before, first thing I did is to just
+
+learn it by myself. I read Beej’s Guide to Network Programming several times.Then I write the code for this project. I build a TCP 
+
+connection between client and edge, through which client can send data to edge and edge can send computation results to client. I 
+
+build also connections be between edge and serever_or, server_and. If it is a ‘and’ operation, edge will send data to serever_and, 
+
+otherwise it will send to serever_or. After server_or or serever_and compute it, it will send back to edge and edge will send back 
+
+to client, then client get result. I implemented these functions.
+
+----------------------------------------------
+CODE FILES AND FUNCTIONS
+
+I have seven files in all: client.c, edge.c, server_or.c, server_and.c, makefile, job.txt, README
+
+client.c: read data form input file, build TCP connection between client and edge server, send data to edge server.
+
+edge.c: get data from client, build UDP connection between edge and serever_or, server_and, process data, send them to  serever_or or server_and by operation.
+
+server_or.c: get data from edge, binary ‘or’ operation , send back results to edge.
+
+server_and.c: get data from edge, binary ‘and’ operation , send back results to edge.
+
+makefile.txt: facilitate to use ‘make’ unix command to compile and run source files.
+
+job.txt : testing data.
+
+----------------------------------------------
+RUN PROGRAM
+
+Just the same as requirement in tutorial.
+
+
+----------------------------------------------
+FORMAT OF MESSAGES
+
+The same as job.txt
+
+
+----------------------------------------------
+IDIOSYNCRASY OF MY PROJECT
+
+Till now, I don’t find bug in the programming.
+
+
+----------------------------------------------
+REUED CODE
+
+socket(),bind(),connect(),listen(),accept(),send(),sendto(),recv(),recvfrom(),close(),sigchld_handler() from Beej’s Guide to Network Programming
+
+
+
